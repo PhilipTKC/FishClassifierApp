@@ -1,0 +1,79 @@
+{
+  "name": "demo",
+  "description": "An Aurelia client application.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "???",
+    "url": "???"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "aurelia-bootstrapper": "^2.4.0",
+    "aurelia-animator-css": "^1.0.4",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "dropzone": "^5.9.3",
+    "ndarray": "^1.0.19",
+    "ndarray-ops": "^1.2.2",
+    "nprogress": "^0.2.0",
+    "onnxjs": "^0.1.8",
+    "rxjs": "^7.8.1",
+    "tailwindcss": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.30.0",
+    "aurelia-cli": "^3.0.1",
+    "aurelia-testing": "^1.1.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "minimatch": "^5.1.2",
+    "promise-polyfill": "^8.2.3",
+    "typescript": "^4.9.4",
+    "tslib": "^2.4.1",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "ts-loader": "^9.4.2",
+    "@types/webpack": "^5.28.0",
+    "postcss-loader": "^7.0.2",
+    "postcss": "^8.4.20",
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "html-webpack-plugin": "^5.5.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "aurelia-webpack-plugin": "^5.0.4",
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "expose-loader": "^4.0.0",
+    "style-loader": "^3.3.1",
+    "css-loader": "^6.7.3",
+    "app-settings-loader": "^2.0.7",
+    "json-loader": "^0.5.7",
+    "html-loader": "^4.2.0",
+    "webpack-bundle-analyzer": "^4.7.0",
+    "tree-kill": "^1.2.2"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "build": "webpack --env production",
+    "start": "webpack server",
+    "build:dev": "webpack",
+    "analyze": "webpack --env production --analyze",
+    "css": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/theme.css --watch"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "overrides": {
+    "chokidar": "^3.0.0",
+    "glob-stream": "^7.0.0",
+    "glob-parent": "^6.0.0",
+    "micromatch": "^4.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+<template>
+  <require from="resources/elements/dropzone.css"></require>
+  <div class="p-2">
+    <form
+      class="dropzone font-bold mt-4 ${imagesToClassify ? 'pointer-events-none' : 'cursor-pointer'} p-8 shadow-lg text-gray-700 text-sm"
+      id="dropzone"
+    >
+      <div class="dz-message" data-dz-message>
+        <span>Click to select or drop files here to classify</span>
+      </div>
+    </form>
+  </div>
+</template>

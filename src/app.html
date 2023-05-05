@@ -1,0 +1,24 @@
+<template>
+  <require from="./css/theme.css"></require>
+  <require from="nprogress.css"></require>
+  <require from="resources/elements/header"></require>
+  <require from="resources/elements/image-dropzone"></require>
+  <require from="resources/elements/classifications.html"></require>
+  <require from="resources/elements/hero"></require>
+
+  <div class="min-h-screen h-full">
+    <hero is-model-loaded.two-way="isModelLoaded"></hero>
+
+    <div class="mx-auto bg-gray-100 p-16" if.bind="isModelLoaded">
+      <image-dropzone results.two-way="results"></image-dropzone>
+    </div>
+
+    <div class="flex justify-center flex-wrap mt-8">
+      <classifications
+        repeat.for="prediction of results"
+        prediction.bind="prediction"
+      >
+      </classifications>
+    </div>
+  </div>
+</template>

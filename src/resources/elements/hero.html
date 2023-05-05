@@ -1,0 +1,42 @@
+<template>
+  <div class="relative bg-gray-50 overflow-hidden">
+    <div class="relative pt-6 pb-12 sm:pb-16 md:pb-20 lg:pb-28 xl:pb-32">
+      <main
+        class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28"
+      >
+        <div class="text-center">
+          <h2
+            class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl"
+          >
+            Proof of Concept Fish Classifier
+          </h2>
+          <p class="mt-2 text-sm">
+            This application uses Amazon Sagemakers image classification
+            algorithm, convolution neural network (CNN), to predict the species
+            of fish present in a user supplied image.
+          </p>
+          <p class="mt-2 text-sm">
+            The ten fish species the model has been trained with are limited to:
+            Albacore, Australian Herring, Australian Salmon, Bream, Big Eye
+            Tuna, Flathead, Flounder, Gurnard, Snapper and Yellowtail Kingfish
+          </p>
+        </div>
+        <div class="mt-12 text-center">
+          <button
+            class="font-bold px-4 py-2 rounded text-white ${isModelLoaded ? 'bg-indigo-400' : 'bg-indigo-500'}"
+            click.delegate="loadModel()"
+          >
+            ${isModelLoading ? 'Model Loading, Please Wait...' : isModelLoaded ?
+            'Model Loaded' : 'Load Model'}
+            <span class="inline-block ml-2" if.bind="isModelLoading">
+              <i class="fas fa-circle-notch fa-spin"></i>
+            </span>
+            <span class="inline-block ml-2" if.bind="isModelLoaded">
+              <i class="fas fa-check"></i>
+            </span>
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+</template>
